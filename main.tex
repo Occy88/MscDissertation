@@ -1,4 +1,4 @@
-\documentclass[paper=a4, fontsize=12pt]{final_report}
+\documentclass[paper=a4, fontsize=12pt]{main}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{listings}
@@ -10,7 +10,6 @@
 \doublespacing
 %%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{xcolor}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -18,33 +17,33 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 \lstset{style=mystyle}
 
 %%% Input project details
-\def\studentname{Octavio del Ser}
-\def\reportyear{2019}
-\def\projecttitle{ Architecture for application of learning methods for the reconstruction of action models.}
-\def\supervisorname{Prof. Sara Bernardini}
-\def\degree{Msc (Hons) in Computer Science}
-\def\fullOrHalfUnit{Full Unit} % indicate if you are doing the project as a Full Unit or Half Unit
-\def\finalOrInterim{Final Report} % indicate if this document is your Final Report or Interim Report
+\newcommand{\studentname}{Octavio del Ser}
+\newcommand{\reportyear}{2019}
+\newcommand{\projecttitle}{ Architecture for application of learning methods for the reconstruction of action models.}
+\newcommand{\supervisorname}{Prof. Sara Bernardini}
+\newcommand{\degree}{Msc (Hons) in Computer Science}
+\newcommand{\fullOrHalfUnit}{Full Unit} % indicate if you are doing the project as a Full Unit or Half Unit
+\newcommand{\finalOrInterim}{Final Report} % indicate if this document is your Final Report or Interim Report
 \begin{document}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
@@ -59,7 +58,7 @@ This report has been prepared on the basis of my own work. Where other published
 
 \vskip3em
 
-Word Count: 
+Word Count:
 
 \vskip3em
 
@@ -82,32 +81,19 @@ A diagram of all systems can be found in the root of the Github. I advise agains
 \newpage
 
 \begin{abstract}
-\input{0 Abstract}
+\input{chapters/0 Abstract.tex}
 \end{abstract}
 
-\input{1 Introduction}
-\input{2 Background}
-\input{3 Methodology}
-\input{4 Design and Implementation}
-\input{5 Results and Analysis} 
-\input{6 Conclusion}
+\input{chapters/1 Introduction.tex}
+\input{chapters/2 Background.tex}
+\input{chapters/3 Methodology.tex}
+\input{chapters/4 Design and Implementation.tex}
+\input{chapters/5 Results and Analysis.tex}
+\input{chapters/6 Conclusion.tex}
 
 \bibliographystyle{plain}
-\bibliography{bibliography.bib}
- %TC:endignore
-%==========================================================================================
-
-
-
-
-%%%% ADD YOUR BIBLIOGRAPHY HERE
-% \newpage
-% \begin{thebibliography}{99}
-% \addcontentsline{toc}{chapter}{Bibliography}
-% \bibitem{COHEN:2013} Dave Cohen and Carlos Matos. \emph{Third Year Projects -- Rules and Guidelines}. Royal Holloway, University of London, 2013.
-% \end{thebibliography}
-% \label{endpage}
+\bibliography{bibliography}
 
 \end{document}
 
-\end{article}
+

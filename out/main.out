@@ -1,0 +1,41 @@
+\BOOKMARK [0][-]{toc.0}{Table of Contents}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [0][-]{chapter.2}{Background and Theory}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Modelling Domains}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{STRIPS}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{PDDL}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Parsers}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Solvers}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Markov Logic Networks}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.4.1}{Markov Networks}{section.2.4}% 11
+\BOOKMARK [2][-]{subsection.2.4.2}{First-Order Logic \(KB\)}{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.3}{Markov Logic Networks}{section.2.4}% 13
+\BOOKMARK [1][-]{section.2.5}{Evaluating Models}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.6}{Existing work}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.6.1}{Support for various domain languages in python}{section.2.6}% 16
+\BOOKMARK [2][-]{subsection.2.6.2}{Synthetic generation of training data}{section.2.6}% 17
+\BOOKMARK [2][-]{subsection.2.6.3}{Simplified implementation of learning models}{section.2.6}% 18
+\BOOKMARK [2][-]{subsection.2.6.4}{Extendable modules for conversion of training output to a standard action model}{section.2.6}% 19
+\BOOKMARK [2][-]{subsection.2.6.5}{Testing learned action models}{section.2.6}% 20
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Problem Scope}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.1.1}{Environment and accessibility}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.2}{Scope of objectives}{section.3.1}% 24
+\BOOKMARK [1][-]{section.3.2}{Minimum use-case}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.2.1}{Defining baseline objectives}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.2}{Defining data collection standards}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{Analysis}{chapter.3}% 28
+\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 29
+\BOOKMARK [1][-]{section.4.1}{High level architecture}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.2}{Domain parsing and simulation modules}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.3}{Learning model interface}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.4}{Evaluation module}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.5}{Final integration}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.6}{Integrating MLN Learner module}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.7}{Training and reconstruction of STRIPS action models}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.7.1}{Proof of concept}{section.4.7}% 37
+\BOOKMARK [1][-]{section.4.8}{Tests}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.9}{Tracking weights}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Results and Analysis}{}% 40
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 41

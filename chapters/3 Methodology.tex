@@ -17,7 +17,7 @@ As with any project version control is required, our experience is with Git henc
 
 \begin{figure}[h]
 \centering
- \includegraphics[width=\linewidth]{git-flow.png}
+ \includegraphics[width=\linewidth]{images/git-flow}
  \caption{development workflow in git.}
  \label{fig:git-flow}
 \end{figure}
@@ -35,7 +35,7 @@ Our first objective is support for parsing various domain languages to a python 
 
 \begin{figure}[h]
 \centering
- \includegraphics[width=1\linewidth]{parser_uml.png}
+ \includegraphics[width=1\linewidth]{images/parser_uml}
  \caption{Basic parser functionality requirement UML.}
  \label{fig:parser-uml}
 \end{figure}
@@ -43,7 +43,7 @@ Our first objective is support for parsing various domain languages to a python 
 Our second objective is to support generation of training data. Here we face our first issue. Training data for planning comes in many formats hence we must define an acceptable standard which is flexible enough to support current development of planning algorithms and maximises existing data generation techniques. We decided that we do not need to place much focus on actual data generation scripts as these are widely available and provide required data-sets in various formats, sizes and languages. We will instead focus on making it as simple as possible to add any existing script for data generation and integrating it with our platform for users to take advantage of. Integration will also involve standardising output format of such scripts. We will be adding several widely available scripts for initial use. This task is not very complex as a lot already exists. 
 \begin{figure}[h]
 \centering
- \includegraphics[width=0.7\linewidth]{data_generator_uml.png}
+ \includegraphics[width=0.7\linewidth]{images/data_generator_uml}
  \caption{Basic data generation requirement UML.}
  \label{fig:data-generator-uml}
 \end{figure}
@@ -52,7 +52,7 @@ Our second objective is to support generation of training data. Here we face our
 The third objective "easy implementation of different learning models" is relatively vague in it's definition, but is important to satisfy. The focus of this objective is to reduce the time it takes for researchers to write code that is useful by nature. We have already described programming standards and their role. Unfortunately often times such standards are not followed when the aim is not for commercial use but research and development. Although as programming has progressed we can argue that any code can be just as easy to develop and still follow modern standards. This is thanks to a multitude of assistance and automation tools made available over the past few years. What we are lacking is their adoption in situations where people are not concerned with following such standards. Our aim is to make an environment that people want to use as it will save them development time. Hence our scope for this objective is to provide an implementation of an existing learning model (Markov Logic Networks) and compare the integration time and relative work done with other papers of similar complexity. We aim to make sure that our implementation is decoupled from the framework as a showcase of how one might integrate with the framework. We will not be adding multiple learning models as such models compatible with python are not widely available for the precise reason that research code is often missing or broken, hence integrating an existing implementation is an intensive process if one is not familiar with the work.
 \begin{figure}[h]
 \centering
- \includegraphics[width=0.7\linewidth]{learning_model_uml.png}
+ \includegraphics[width=0.7\linewidth]{images/learning_model_uml}
  \caption{Basic learning model integration UML.}
  \label{fig:learning-model-uml}
 \end{figure}
@@ -60,7 +60,7 @@ The third objective "easy implementation of different learning models" is relati
 The fourth objective involves the implementation of extendable modules for conversion of training output to a standard action model. We came to the conclusion that these modules are specific to the learning model output hence methods we use for conversion will be proprietary. However our objective is to make it possible for different learning techniques that have the same output to be able to share an action model reconstruction module. This means each module must make it's input data clear to potential users, Python supports typing and we can use documentation to enable such work. We made the decision to provide two action model reconstruction modules in order to demonstrate the use cases these satisfy. A generated action model must be compatible with our simulation module hence for now output is restricted to the only supported language PDDL. 
 \begin{figure}[h]
 \centering
- \includegraphics[width=0.7\linewidth]{action_model_reconstructor_uml.png}
+ \includegraphics[width=0.7\linewidth]{images/action_model_reconstructor_uml}
  \caption{Basic action model reconstructor implementation UML.}
  \label{fig:action-model-reconstructor-uml}
 \end{figure}
@@ -68,7 +68,7 @@ The fourth objective involves the implementation of extendable modules for conve
 Our final objective is developing a testing framework for learned action models. We will create a python based simulation module taking the learned action models as input and some test data for simulation of the reconstructed action models. We will base the simulator on rules taken from PDDL 2.2 planners. Our objective for the simulator is to generate data and compare data between differently generated action models. We will make such a simulator as modular as possible allowing for simulators written in other languages to be used as well if they exist. Work on simulation has been done, however we deem it important to provide our own as the work is necessary either way if we are translating a planning definition language into python. 
 \begin{figure}[h]
 \centering
- \includegraphics[width=0.4\linewidth]{domain_simulator.png}
+ \includegraphics[width=0.4\linewidth]{images/domain_simulator}
  \caption{Basic action model reconstructor implementation UML.}
  \label{fig:domain-simulator-uml}
 \end{figure}
