@@ -1,0 +1,45 @@
+\chapter{Introduction}
+
+\cite{ReviewActionModels:article}
+
+% what is the problem space
+% Some examples
+% How do the above examples tie in with issues faced
+% What needs to1 be answered in order to create the system that we propose (rethorical)
+% Which of these has been attempted how did it work out, -> hence us doing it.
+
+% What is automated planning/ reconstruction
+This dissertation focuses on Automated Planning (AP), a well-established branch of artificial intelligence that concerns itself with the generation of strategies or plans typically fulfilled by intelligent agents (robots, UAV's, MAV's). 
+
+A plan or plan trace defines itself by a series of actions meant for the execution on an initial state space transitioning it to a pre-defined goal state. Running such a plan accomplishes a task such as the evasion of an obstacle.
+%languages
+The laws governing a state space (action-models, objects, relations) are usually interpreted by a formal language. Many such languages exist today (PDDL, PPDDL, STRIPS, OCL, ADL), each created to improve expressiveness, ease of use, or add desired functionality. Such languages were introduced as an attempt to standardize the process of defining a domain and solving planning problems. Languages are similar in their structure, a domain and a problem must be defined, which is then used by a compatible solver to find a solution for the problem in said domain. 
+
+Knowledge Engineering (KE) for AP is the process that deals with the overall generation of domain models from existing data (plans, actions, states), including the acquisition, formulation, validation and maintenance of knowledge for the model \cite{AutomatedKETools:inproceedings}.
+
+As discussed in many such papers, the encoding of a domain left to a domain expert, being a laborious and complex task, it makes future maintenance difficult and is always prone to human induced error and testing is also a non-trivial task. This issue compounded with the ever increasing complexity of real-world scenarios thanks to advancements in computation and need for automation, means that the challenge of engineering domain models is always increasing.In an effort to tackle this issue and assisting domain experts in modeling domains, various systems are constantly in development to acquire AP models automatically.
+
+Existing state of the art planning algorithms such as AMAN, LOPE, ARTUE, ARMS and more \cite{ReviewActionModels:article} rely on a multitude of different learning based approaches, such as reinforcement learning, MAX-SAT, supervised learning, transfer learning and others. Each of these algorithms also rely on specific input data and output action models in different languages. This added complexity makes it difficult for anybody without expertise in a particular implementation, of using newly developed techniques. It has also been observed that working examples of implementations are difficult to obtain and test due to the lack of standard data generation techniques often provided by websites which no longer exist.
+
+The above demonstrates a clear lack of organization and management of existing algorithms and techniques in the planning community. An argument could be made that a lack of commercial appropriation of such niche techniques (in industry) made the development of libraries comparable to Tensorflow or Pytorch overly laborious and time-wise uneconomical for individuals. However the lack of such robust and readily available code makes teaching and implementation or even experimentation of existing techniques unnecessarily complex often causing avoidance of the field all together. We also have to consider the constant evolution of programming languages. As time goes on and problems become more complex, there is a constant shift towards higher level languages. This is thanks to their increased legibility and development speed. For such reasons most complex algorithms and data structures are usually written in lower level languages such as C/C++ and then wrapped by most popular higher level languages for easy implementation such as GO and Python, this has not been the case with Domain languages.
+
+As a result of the above issues we can observe that teaching bodies or inexperienced users often resort implementing planning problems from scratch, using custom data structures and algorithmic implementations in higher level languages such as python due to their comfort; rather than implementing a domain using a Domain language and a solver in their their preferred higher level language.
+
+% What are the key objectives from the above (to solve/analyse/future improvement)
+% What was the goal and where does it stand int he dissertation
+% How are results evaluated (where in the disseratation/what was done) / any difficulties
+% 
+%Objectivesz
+% Methods
+% Results
+% Conclusions
+We ask ourselves, what needs to be done in order to tackle these issues. We identify the two most important problems that require a solution. First is that a solution needs to be useful for researchers in the field, mainly saving them time and effort when developing new ideas. This means the solution needs to be highly adaptable/modular to any environment allowing for constant improvement and extension. It also has to aid in mundane tasks such as data generation and management for testing and implementation. This allows for more accessible and robust and verifiable implementations. Examples exist for machine learning, such as importing of pre-processed datasets (mnist etc...) directly from a package. Secondly the system needs to be simple and robust for users alien to the field. This requires good documentation, and high level access to existing algorithms without the need to open the guts of a particular implementation.
+
+Given the above we propose a framework with an initial proof of concept built in python, integrating a custom implementation of a single algorithm for reconstruction of action-models using Markov Logic Networks, and test this implementation against existing data. 
+Our objectives for the framework are as follows: \begin{enumerate}
+    \item Support for parsing various domain languages to a python standard..
+    \item Synthetic generation of training data.
+    \item Simplified implementation of learning models.
+    \item Extendable modules for conversion of training output to a standard action model.
+    \item Testing framework for learned action models.
+\end{enumerate}

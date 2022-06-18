@@ -1,0 +1,259 @@
+\chapter{Design and Implementation}
+In this chapter we will review in detail the design of our framework and each corresponding module. We will discuss how modules interact and the reasoning behind the design choices we made. We will also discuss problems which we encountered when building the framework as well as those that came to light during initial use. We broke down this chapter into sections stemming from the higher level design concepts into the lower level modules. This will make it easier to piece together the utility of each module we introduce and its required functionality. After the sections on the framework itself, we will implement our learning algorithm (MLN). Finally we will review the process of integrating our learning algorithm with the framework and test its overall functionality. Results and analysis will be reviewed in the next chapter.
+% section{What we are doing}
+\section{High level architecture}
+Before defining the high level architecture for a platform meant to support the development of learning models, we must review what a common learning architecture looks like. These are well established, and for our system it represents the core of what needs to be supported in order for the framework implementation to be a viable asset. This includes accommodation of different domains, languages and environments these core components will later be expanded in more detail. A base learning architecture has three components input data, learning model and an evaluation tool. In the case of learning action models, input data can be produced from real or synthetic measures, the learning model will need to output an action model, and the evaluation tool will then use a domain simulator to test the action model for validity and accuracy. A domain simulator can also in turn be used to produce synthetic data. 
+ 
+\begin{figure}[h]
+ \centering
+ 
+ \includegraphics[width=0.7\textwidth]{Core Architecture.PNG}
+ \caption{Core elements of a learning architecture for reconstructing action models.}
+
+\end{figure}
+\newpage
+\section{Domain parsing and simulation modules}
+For parsing domain languages we implemented the architecture defined in figure \ref{fig:parser-uml}. Then we proceeded to integrating support for PDDL 2.1. The parsing toolkit of choice was Antlr it's ease of use and compatibility with multiple languages made it much easier to develop with. We could also easily separate a language features/nodes into different files meaning that maintenance and extension of our implementation is much easier even for people unfamiliar with the structure. We followed the BNF Description of PDDL 2.1 defined in \cite{pddl21:online} to ensure compliance with standards. This also made it easier to test and ensure parsing of each definition was performed correctly. 
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.3\textwidth]{parser_dir}
+ \caption{Directory structure under framework root for integrating parsers.}
+  \label{fig:parser-dir}
+\end{figure}
+\newline
+Figure \ref{fig:parser-dir} demonstrates how the integration of new parsers to the framework is done. We omitted creating an interface layer for transformers with our simulation module as it is unnecessary when working with a single language, and we are interested in an initial proof of concept. Creating an interface layer at this time although absolutely necessary for integration of another language, it simply provides no benefit at this moment. 
+
+As of now we based the simulation engine on the semantics defined for the PDDL 2.1 \cite{pddl21:online}. Rules are extensively defined and we made sure to separate these in our code allowing for modifications in the future. Unfortunately this does mean that as of now we have coupled our simulation engine with our parser, however this is only due to the lack of development time invested in this section of the framework. The disadvantages of this coupling will be evident when attempting to integrate a new parser, as it will have to follow the rules of the engine. However we do assume that this can be mitigated over time by upgrading and extending the simulation engine to support different input formats and rules therefore making it more generic.
+\newpage
+To provide an indication of how the parser is implemented we will now provide a vertical slice of a simple lexical component. Our example will be on the implementation of the predicate in the PDDL 2.1 specification. The specification states that the predicate is defined as follows:
+\begin{lstlisting}
+<predicate>     ::= <name>
+*** dependencies ***
+<name>          ::= /([a-zA-Z]|\d)+((_|-)([a-zA-Z]|\d)+)*/
+\end{lstlisting}
+With this specification we can define the grammar.lark file for predicate, we assume that all dependencies are satisfied. 
+
+\begin{lstlisting}t
+%import .name.name
+
+predicate: name
+\end{lstlisting}
+This demonstrates how simple our chosen architecture is and how flexible the system is to modify. The next step is to specify the transformer that converts predicate nodes into a python data structure for use in the simulator.
+
+\begin{lstlisting}[language=Python]
+from lark import Transformer
+
+
+class Predicate(Transformer):
+
+    @staticmethod
+    def predicate(args):
+        val = args[0].children[0]
+        return val
+
+\end{lstlisting}
+Predicate is a relatively simple structure so we only need to recover the stored underlying value of "name" as they are both strings, more complicated structures such as actions, depend on more complex implementations that align with their use cases.
+Finally we test the parser to ensure that it performs as expected given the data we would reasonably expect to pass it:
+
+
+\newpage
+\begin{lstlisting}[language=Python]
+import os
+from unittest import TestCase
+from lark import Lark
+from pddl_parser.transformers import Predicate
+
+class TestGrammarPredicate(TestCase):
+    def setUp(self) -> None:
+        self.grammar = """
+        start:predicate
+        %import .predicate.predicate
+        %import common (WS)
+        %ignore WS
+        """
+        self.transformer = Predicate()
+        self.import_path = [f'{os.getcwd()}/../../grammar/']
+        self.parser = "lalr"
+
+    def test_predicate_parses_kebab_case(self):
+        try:
+            parser = Lark(grammar=self.grammar, import_paths=self.import_path, parser=self.parser)
+            parser.parse("""predicate-with-dashes""")
+        except Exception as e:
+            self.fail(msg=e)
+
+    def test_predicate_parses_snake_case(self):
+        try:
+            parser = Lark(grammar=self.grammar, import_paths=self.import_path, parser=self.parser)
+            parser.parse("""predicate_with_underscores""")
+        except Exception as e:
+            self.fail(msg=e)
+
+    def test_predicate_parsing_fails(self):
+        parser = Lark(grammar=self.grammar, import_paths=self.import_path, parser=self.parser)
+        self.assertRaises(Exception, parser.parse, """space separated""", msg='failed to raise on space separator')
+        self.assertRaises(Exception, parser.parse, """(not-char""", msg='failed to raise on non char in word')
+        self.assertRaises(Exception, parser.parse, """1not-num""", msg='failed to raise on num in word')
+
+    def test_predicate_transformer(self):
+        try:
+            parser = Lark(grammar=self.grammar, import_paths=self.import_path, transformer=self.transformer,
+                          parser=self.parser)
+            parser.parse("""predicate-with-dashes""")
+        except Exception as e:
+            self.fail(msg=e)
+\end{lstlisting}
+We can observe that tests are more extensive as we want to ensure that when using our parser unwanted behaviour does not occur. Code is only ever as good as the tests supporting it because when modifications are made, only tests can assure a developer that other features have not been compromised and if they have, then there is a path to fixing them. 
+\newpage
+\section{Learning model interface}
+This section is relatively simple, we define the class interaction that is required for the full implementation of a learning model. We are only displaying the UML nearest neighbours as previously mentioned in order to best demonstrate the functionality required by the module we are working with.
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=1\textwidth]{learning_module_interaction_uml.png}
+ \caption{Learning model class dependency UML.}
+  \label{fig:learning-module-interaction-uml}
+\end{figure}
+\newline
+The above figure displays how we have implemented a sample learning model. For the implementation of the train function we have full use of the dataset loader to get the necessary data and perform any transformation on it. The dataset loader is similar to a library like Pandas, providing the ability to load data in the correct format from files. This was a necessary implementation in our use case are defined differently from standard numpy arrays. We previously defined the data generation interface, this interface ensures that data is compatible with our dataset loader and is flexible enough for any use by the implemented learning model. The learning model can also make use of the simulator to test if the predicted action model is valid and how well it performs on given problems. This can be used as part of the optimization function when training, although we have tested this to date. 
+\newpage
+\section{Evaluation module}
+The purpose of this module is to leverage the simulator and the output action model from training to evaluate its performance given the desired functionality set by the user. The functionality includes a given domain and a set of problems which cover the scenarios the action model will be subjected to. The functionality desired by the user may also include specific responses to pre-defined states if such states are encountered in the domain as the plan is being executed.
+\newpage
+\section{Final integration}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=1\textwidth]{final_integration_uml.png}
+ \caption{Relations of most important modules for complete framework for a specific use-case, ignoring interfaces}
+  \label{fig:learning-module-interaction-uml}
+\end{figure}
+In the figure above, we display the interaction between all important modules for our use case. This ignores the interfaces we provided for other languages, domains, data generators and learning models that can be added seamlessly to the framework. We can observe the end to end flow of data, from the initial generation of training datasets, to the training of prediction models and their evaluation.
+\newpage
+\section{Integrating MLN Learner module}
+A STRIPS domain consists of a state \(S\) and a set of action models \(M\).
+\(S\) is a set of predicates with typed arguments.
+A strips action model \(A\) which we are attempting to reconstruct, is defined by  \(\{a,a_{pre},a_{add},a_{del}\}\). \(a\) is the name with typed arguments of the function, \(a_{pre}\) is set of preconditions which specify the conditions of a state under which \(a\) can be applied. \(a_{add}, a_{del}\) is the add and delete list respectively, these lists indicate the effects of \(a\) on a state, specifying which new predicates are to be added and which existing predicates are to be removed.
+\newline \newline
+We define a valid database \(D\) by \(\{a,S_{p}\}\) where \(S_p\)  is a set of predicates in the form \(p_{name}(p_{args},f\in \{-1,0,1\})\), the modification here is that we have added a variable \(f\) to each predicate representing if it is a member of \(a_{add}\) if \(f=1\), \(a_{del}\) if \(f=-1\) and the set of predicates where \(f=0\) form a super-set of \(a_{pre}\).
+\newline \newline
+A plan with its intermediate state-action pairs can hence be represented as an ordered list of databases. This representation is useful because it allows us to now create a model which predicts \(A\) given a partially complete database after training.
+\newline \newline
+In order to tackle possible noise in the database we need to use a model that can handle constraints being violated, one such model is a Markov Logic Netork (MLN). Where as a first-order knowledge base is a set of hard constraints on a set of possible worlds in which a violation of a constraint implies 0 probability for said world. MLN's soften these constraints and reduces the weight of the violating constraint making the world less probable instead of impossible. MLN's are formulated as a set of pairs \(w_i,F_i\) where \(w_i\) is the weight of a formula represented as a real number, and \(F_i\) is a formula in first-order logic. Together with a finite set of constraints \(C = \{c_1,c_2,...,c_{|C|}\}]\), it defines Markov network \(M_{L,C}\) as follows:
+%ref: https://homes.cs.washington.edu/~pedrod/kbmn.pdf
+% equation 1
+% equation 2
+\section{Training and reconstruction of STRIPS action models}
+Strips action models can be reformulated as a conjunction of typed predicates \(a_{pre},a_{add},a_{del}\), this set of predicates belonging to a specific action should represent a subset of a database for a matching action. As we have no prior knowledge of the valid subset when creating and training the MLN, we must assume that all predicates a valid and generate an MLN accordingly. Once weights reduce bellow a set threshold we can prune them out of the MLN as they represent predicates that would render the action model improbable.
+    \newline \newline
+    
+The algorithm for generating and training an MLN from a database instance is as follows:
+
+\newline
+process \(D\):\newline
+\(MLN \impliedby action\_MLNS[a] \) \newline
+for each predicate \(p\) that has not been pruned or previously added to \(MLN\):\newline
+----- generate and add formula: \(a \implies p\) with initial weight 0 to \(MLN\)\newline
+train MLN (online)  with database \(D\)\newline
+prune weights (for efficiency)\newline
+
+once training is complete we can extract each predicate with its weight .
+
+An optimization for the above routine is to prune any predicates that does not share variables with the action being processed.
+
+Due to a lack of resources available for working with PDDL in python, I have designed a system for generating generic plan traces from PDDL in python. This was necessary as many modern learning tools use python and it is a language that saves a lot of development time thanks to readily available complex libraries (Tensorflow, Pracmln, Pytorch, Sklearn etc...). Such libraries will allow for more interesting strategies in tackling the problem at hand. \newline \newline 
+The greatest difficulty encountered is in the Generation of Plan Traces, as planners used don't provide intermediate states or add and delete lists, hence these must be generated from the parsed action models directly. There are no known libraries for parsing action models that support more than simple STRIPS, hence a custom extendable parser was
+implemented.
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Proof of concept}
+\section{Tests}
+we can track weights with varying noise in the databases. Systematic noise can be added by removing a target set of predicates with a given probability. And Random noise can be added by removing any given predicate by a defined probability. 
+
+Accuracy
+We measure accuracy by analysing how similar a derived logic network is to the expected logic network which we can construct. We can calculate the error rate for \(a_{pre}\) by the following formula:
+\[E(a_{pre})=\frac{a_{pre}\cap \{p\in MLN_{|(f\in p) =0}\}|}{\max( |a_{pre}|,|p\in MLN|)}\]
+The same formula can be applied for \(a_{add},a_{del}\) simply by replacing the 0 with 1 and -1 respectively. The total error of the resulting MLN is the average of the above three errors expressed by the equation bellow.
+\[E(MLN)=\frac{sum(E(a_{pre}),E(a_{del}),E(a_{add}))}{3}\]
+
+\section{Tracking weights}
+As a preliminary experiment, weights were pruned due to the excessive time it took to train the MLN, this means only the predicates that are related to the action model are being trained.
+I have also included the cumulative weights (sum of independently trained MLN's for each database and action model.
+
+
+
+\begin{figure}[h]
+ \centering
+ \begin{minipage}[b]{0.49\linewidth}
+ \includegraphics[width=1\textwidth]{movegraph_100.png}
+ \caption{Move action MLN, no noise {fig:mv 100}}
+
+ \end{minipage}
+ \hfill
+ \begin{minipage}[b]{0.49\linewidth}
+ 
+ \includegraphics[width=1\textwidth]{movegraph_100_cum.png}
+ \caption{Move action MLN (cumulative), no noise {fig:mv 100 cum}}
+
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+ \centering
+ \begin{minipage}[b]{0.49\linewidth}
+ \includegraphics[width=1\textwidth]{movegraph_rand_70.png}
+ \caption{Move action MLN, .3 rand noise {fig:mv}}
+
+ \end{minipage}
+ \hfill
+ \begin{minipage}[b]{0.49\linewidth}
+ 
+ \includegraphics[width=1\textwidth]{movegraph_rand_30.png}
+ \caption{Move action MLN, .7 rand noise on){fig:mv_100_cum}}
+
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+ \centering
+ \begin{minipage}[b]{0.49\linewidth}
+ \includegraphics[width=1\textwidth]{movegraph_sys_70.png}
+ \caption{Move action MLN, .3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+
+ \end{minipage}
+ \hfill
+ \begin{minipage}[b]{0.49\linewidth}
+ 
+ \includegraphics[width=1\textwidth]{movegraph_sys_30.png}
+ \caption{Move action MLN, .7 sys noise on conn(v0,v1,0){fig:mv_100_cum}}
+
+ \end{minipage}
+\end{figure}
+\newpage
+As we can observe from the above data, Although weights will reduce with noise. If we include predicates unrelated to the model, these will reduce much faster than noisy weights, this would allow us to recreate an action model from the network. \newline\newline
+The greatest issue with this approach is not the viability of the technique but the efficiency of it. To train 25 database containing multiple actions, it takes around 30s to 1min, a multicore approach was not implemented in the pracmln package used for training, and a multitude of optimizations and fixes were done in order to speed up training and errors (optimizing data structures, operations over arrays, improperly handled exceptions, a fixed package has been uploaded to the project). A partial rewrite of the package for training MLN's online is required in order to use this technique on any moderately serious domains (>20 predicates). Optimizations include multithreading the training process, optimizing operation over grounded predicates and weights.\newline\newline
+The results in the figures provided were created by training MLN's on pruned weights as forgoing this step made training impossible. Training speed reduces significantly when the number of weights are doubled or tripled which is a common occurrence in a normal domain. 
+%  Existing  techniques for learning action traces...
+
+%  define error for preconditions
+
+% extrapolate to error of action model.
+
+
+
+
+% Encoding of action plan trace (Database)
+
+% Encoding of a logic network
+% Training of a logic network
+% Noise
+% Prediction
+% Error evaluation
