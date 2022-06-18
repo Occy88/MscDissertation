@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.18)  18 JUN 2022 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.18)  18 JUN 2022 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -378,7 +378,11 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__pdf_internal_box=\box52
 )
 (/home/c4r4mel/pycharm_projects/royal_holloway/action_model_reconstruction_fram
-ework/MscDissertation/out/main.aux)
+ework/MscDissertation/out/main.aux
+
+LaTeX Warning: Label `fig:learning-module-interaction-uml' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -500,23 +504,24 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 (/home/c4r4mel/pycharm_projects/royal_holloway/action_model_reconstruction_fram
-ework/MscDissertation/out/main.toc)
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 78.
+ework/MscDissertation/out/main.toc
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 1.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 78.
+(Font)              size <5> substituted on input line 1.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 78.
+(Font)              size <5> substituted on input line 1.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 78.
+(Font)              size <5> substituted on input line 1.
+
+[2])
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
 
 Overfull \hbox (5.61711pt too wide) in paragraph at lines 78--80
@@ -524,27 +529,27 @@ Overfull \hbox (5.61711pt too wide) in paragraph at lines 78--80
 / / github . com / Occy88 / AIPrinciples / tree / main / Planning /
  []
 
-[2] (./chapters/0 Abstract.tex) (./chapters/1 Introduction.tex [3
+[3] (./chapters/0 Abstract.tex) (./chapters/1 Introduction.tex [4
 
 ]
 Chapter 1.
 
-LaTeX Warning: Citation `ReviewActionModels:article' on page 4 undefined on inp
+LaTeX Warning: Citation `ReviewActionModels:article' on page 5 undefined on inp
 ut line 3.
 
 
-LaTeX Warning: Citation `AutomatedKETools:inproceedings' on page 4 undefined on
- input line 18.
+LaTeX Warning: Citation `AutomatedKETools:inproceedings' on page 5 undefined on
+ input line 29.
 
 
-LaTeX Warning: Citation `ReviewActionModels:article' on page 4 undefined on inp
-ut line 22.
+LaTeX Warning: Citation `ReviewActionModels:article' on page 5 undefined on inp
+ut line 38.
 
-[4
+[5
 
-]) (./chapters/2 Background.tex [5]
+]) (./chapters/2 Background.tex [6]
 Chapter 2.
-[6
+[7
 
 ]
 Overfull \hbox (5.47232pt too wide) in paragraph at lines 13--14
@@ -553,37 +558,34 @@ Overfull \hbox (5.47232pt too wide) in paragraph at lines 13--14
 p[]$\OT1/cmr/m/n/10.95 ,
  []
 
-[7]
-<images/parserflow.png, id=72, 145.54375pt x 407.5225pt>
-File: images/parserflow.png Graphic file (type png)
-<use images/parserflow.png>
-Package pdftex.def Info: images/parserflow.png  used on input line 33.
+[8]
+<images/architecture/parserflow.png, id=269, 145.54375pt x 407.5225pt>
+File: images/architecture/parserflow.png Graphic file (type png)
+<use images/architecture/parserflow.png>
+Package pdftex.def Info: images/architecture/parserflow.png  used on input line
+ 33.
 (pdftex.def)             Requested size: 107.54965pt x 301.1261pt.
 
 
-LaTeX Warning: Reference `fig:parserflow' on page 8 undefined on input line 37.
-
-
-
-LaTeX Warning: Citation `ParsingW23:online' on page 8 undefined on input line 3
+LaTeX Warning: Citation `ParsingW23:online' on page 9 undefined on input line 3
 7.
 
-[8 <./images/parserflow.png>] [9]
+[9 <./images/architecture/parserflow.png>] [10]
 
-LaTeX Warning: Citation `FastDown46:online' on page 10 undefined on input line 
+LaTeX Warning: Citation `FastDown46:online' on page 11 undefined on input line 
 52.
 
 
-LaTeX Warning: Citation `pracmln' on page 10 undefined on input line 58.
-
-[10]
-
-LaTeX Warning: Citation `Markovra75:online' on page 11 undefined on input line 
-70.
+LaTeX Warning: Citation `pracmln' on page 11 undefined on input line 58.
 
 [11]
 
-LaTeX Warning: Citation `mlj05pdf51:online' on page 12 undefined on input line 
+LaTeX Warning: Citation `Markovra75:online' on page 12 undefined on input line 
+70.
+
+[12]
+
+LaTeX Warning: Citation `mlj05pdf51:online' on page 13 undefined on input line 
 82.
 
 ./chapters/2 Background.tex:86: Missing $ inserted.
@@ -602,145 +604,150 @@ l.87
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[12] [13]
-<images/Selection_019.png, id=116, 882.29625pt x 322.20375pt>
+[13] [14]
+<images/Selection_019.png, id=307, 882.29625pt x 322.20375pt>
 File: images/Selection_019.png Graphic file (type png)
 <use images/Selection_019.png>
 Package pdftex.def Info: images/Selection_019.png  used on input line 112.
 (pdftex.def)             Requested size: 441.01773pt x 161.0523pt.
- [14 <./images/Selection_019.png>]
+ [15 <./images/Selection_019.png>]
 
-LaTeX Warning: Citation `ssardina20:online' on page 15 undefined on input line 
+LaTeX Warning: Citation `ssardina20:online' on page 16 undefined on input line 
 131.
 
 
-LaTeX Warning: Citation `hfoffani23:online' on page 15 undefined on input line 
+LaTeX Warning: Citation `hfoffani23:online' on page 16 undefined on input line 
 133.
 
 
-LaTeX Warning: Citation `httpsarx9:online' on page 15 undefined on input line 1
+LaTeX Warning: Citation `httpsarx9:online' on page 16 undefined on input line 1
 33.
-
-[15]
-
-LaTeX Warning: Citation `pucrsaut37:online' on page 16 undefined on input line 
-135.
 
 [16]
 
-LaTeX Warning: Citation `AAAIPres94:online' on page 17 undefined on input line 
+LaTeX Warning: Citation `pucrsaut37:online' on page 17 undefined on input line 
+135.
+
+[17]
+
+LaTeX Warning: Citation `AAAIPres94:online' on page 18 undefined on input line 
 150.
 
 
-LaTeX Warning: Citation `1210488932:online' on page 17 undefined on input line 
+LaTeX Warning: Citation `1210488932:online' on page 18 undefined on input line 
 150.
 
-[17]) (./chapters/3 Methodology.tex [18]
+[18]) (./chapters/3 Methodology.tex [19]
 Chapter 3.
-[19
+[20
 
 ]
-
-LaTeX Warning: Reference `background:Existing Work' on page 20 undefined on inp
-ut line 12.
-
-<images/git-flow.png, id=151, 456.20438pt x 207.77625pt>
-File: images/git-flow.png Graphic file (type png)
-<use images/git-flow.png>
-Package pdftex.def Info: images/git-flow.png  used on input line 20.
+<images/architecture/git-flow.png, id=336, 456.20438pt x 207.77625pt>
+File: images/architecture/git-flow.png Graphic file (type png)
+<use images/architecture/git-flow.png>
+Package pdftex.def Info: images/architecture/git-flow.png  used on input line 2
+0.
 (pdftex.def)             Requested size: 441.01773pt x 200.86423pt.
-[20 <./images/git-flow.png>]
-
-LaTeX Warning: Reference `fig:git-flow' on page 21 undefined on input line 25.
-
-[21]
-<images/parser_uml.png, id=165, 711.65875pt x 420.57124pt>
-File: images/parser_uml.png Graphic file (type png)
-<use images/parser_uml.png>
-Package pdftex.def Info: images/parser_uml.png  used on input line 38.
+ [21 <./images/architecture/git-flow.png>] [22]
+<images/architecture/parser_uml.png, id=349, 711.65875pt x 420.57124pt>
+File: images/architecture/parser_uml.png Graphic file (type png)
+<use images/architecture/parser_uml.png>
+Package pdftex.def Info: images/architecture/parser_uml.png  used on input line
+ 38.
 (pdftex.def)             Requested size: 441.01773pt x 260.62955pt.
- [22 <./images/parser_uml.png>]
-<images/data_generator_uml.png, id=172, 450.68375pt x 419.5675pt>
-File: images/data_generator_uml.png Graphic file (type png)
-<use images/data_generator_uml.png>
-Package pdftex.def Info: images/data_generator_uml.png  used on input line 46.
+ [23 <./images/architecture/parser_uml.png>]
+<images/architecture/data_generator_uml.png, id=355, 450.68375pt x 419.5675pt>
+File: images/architecture/data_generator_uml.png Graphic file (type png)
+<use images/architecture/data_generator_uml.png>
+Package pdftex.def Info: images/architecture/data_generator_uml.png  used on in
+put line 46.
 (pdftex.def)             Requested size: 308.71106pt x 287.4084pt.
-<images/learning_model_uml.png, id=173, 451.6875pt x 440.64626pt>
-File: images/learning_model_uml.png Graphic file (type png)
-<use images/learning_model_uml.png>
-Package pdftex.def Info: images/learning_model_uml.png  used on input line 55.
+<images/architecture/learning_model_uml.png, id=356, 451.6875pt x 440.64626pt>
+File: images/architecture/learning_model_uml.png Graphic file (type png)
+<use images/architecture/learning_model_uml.png>
+Package pdftex.def Info: images/architecture/learning_model_uml.png  used on in
+put line 55.
 (pdftex.def)             Requested size: 308.71106pt x 301.18193pt.
- [23 <./images/data_generator_uml.png>]
-<images/action_model_reconstructor_uml.png, id=179, 620.3175pt x 257.96375pt>
-File: images/action_model_reconstructor_uml.png Graphic file (type png)
-<use images/action_model_reconstructor_uml.png>
-Package pdftex.def Info: images/action_model_reconstructor_uml.png  used on inp
-ut line 63.
+ [24 <./images/architecture/data_generator_uml.png>]
+<images/architecture/action_model_reconstructor_uml.png, id=363, 620.3175pt x 2
+57.96375pt>
+File: images/architecture/action_model_reconstructor_uml.png Graphic file (type
+ png)
+<use images/architecture/action_model_reconstructor_uml.png>
+Package pdftex.def Info: images/architecture/action_model_reconstructor_uml.png
+  used on input line 63.
 (pdftex.def)             Requested size: 308.71106pt x 128.3793pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./images/learning_model_uml.png>]
-<images/domain_simulator.png, id=186, 279.0425pt x 312.16624pt>
-File: images/domain_simulator.png Graphic file (type png)
-<use images/domain_simulator.png>
-Package pdftex.def Info: images/domain_simulator.png  used on input line 71.
+[25 <./images/architecture/learning_model_uml.png>]
+<images/architecture/domain_simulator.png, id=369, 279.0425pt x 312.16624pt>
+File: images/architecture/domain_simulator.png Graphic file (type png)
+<use images/architecture/domain_simulator.png>
+Package pdftex.def Info: images/architecture/domain_simulator.png  used on inpu
+t line 71.
 (pdftex.def)             Requested size: 176.40439pt x 197.35168pt.
- [25 <./images/action_model_reconstructor_uml.png> <./images/domain_simulator.p
-ng>])
-(./chapters/4 Design and Implementation.tex [26] [27]
+ [26 <./images/architecture/action_model_reconstructor_uml.png> <./images/archi
+tecture/domain_simulator.png>]) (./chapters/4 Design and Implementation.tex [27
+] [28]
 Chapter 4.
-<images/Core Architecture.png, id=210, 454.19687pt x 227.34938pt>
-File: images/Core Architecture.png Graphic file (type png)
-<use images/Core Architecture.png>
-Package pdftex.def Info: images/Core Architecture.png  used on input line 10.
-(pdftex.def)             Requested size: 308.71106pt x 154.52614pt.
-[28
 
- <./images/Core Architecture.PNG>]
+./chapters/4 Design and Implementation.tex:10: LaTeX Error: File `images/Core A
+rchitecture' not found.
 
-LaTeX Warning: Reference `fig:parser-uml' on page 29 undefined on input line 16
-.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ...h=0.7\textwidth]{images/Core Architecture}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
+[29
 
-LaTeX Warning: Citation `pddl21:online' on page 29 undefined on input line 16.
+]
 
-<images/parser_dir.png, id=219, 157.08687pt x 168.63pt>
-File: images/parser_dir.png Graphic file (type png)
-<use images/parser_dir.png>
-Package pdftex.def Info: images/parser_dir.png  used on input line 19.
+LaTeX Warning: Citation `pddl21:online' on page 30 undefined on input line 16.
+
+<images/architecture/parser_dir.png, id=395, 157.08687pt x 168.63pt>
+File: images/architecture/parser_dir.png Graphic file (type png)
+<use images/architecture/parser_dir.png>
+Package pdftex.def Info: images/architecture/parser_dir.png  used on input line
+ 19.
 (pdftex.def)             Requested size: 132.30666pt x 142.03418pt.
 
-LaTeX Warning: Reference `fig:parser-dir' on page 29 undefined on input line 24
-.
+LaTeX Warning: Citation `pddl21:online' on page 30 undefined on input line 26.
 
-
-LaTeX Warning: Citation `pddl21:online' on page 29 undefined on input line 26.
-
-[29 <./images/parser_dir.png>]
+[30 <./images/architecture/parser_dir.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [30] [31]
-[32]
-<images/learning_module_interaction_uml.png, id=306, 689.57625pt x 261.97874pt>
-
-File: images/learning_module_interaction_uml.png Graphic file (type png)
-<use images/learning_module_interaction_uml.png>
-Package pdftex.def Info: images/learning_module_interaction_uml.png  used on in
-put line 112.
+) [31] [32]
+[33]
+<images/architecture/learning_module_interaction_uml.png, id=482, 689.57625pt x
+ 261.97874pt>
+File: images/architecture/learning_module_interaction_uml.png Graphic file (typ
+e png)
+<use images/architecture/learning_module_interaction_uml.png>
+Package pdftex.def Info: images/architecture/learning_module_interaction_uml.pn
+g  used on input line 112.
 (pdftex.def)             Requested size: 441.01773pt x 167.5499pt.
- [33 <./images/learning_module_interaction_uml.png>] [34]
-<images/final_integration_uml.png, id=318, 437.13312pt x 349.80687pt>
-File: images/final_integration_uml.png Graphic file (type png)
-<use images/final_integration_uml.png>
-Package pdftex.def Info: images/final_integration_uml.png  used on input line 1
-25.
+ [34 <./images/architecture/learning_module_interaction_uml.png>] [35]
+<images/architecture/final_integration_uml.png, id=492, 437.13312pt x 349.80687
+pt>
+File: images/architecture/final_integration_uml.png Graphic file (type png)
+<use images/architecture/final_integration_uml.png>
+Package pdftex.def Info: images/architecture/final_integration_uml.png  used on
+ input line 125.
 (pdftex.def)             Requested size: 441.01773pt x 352.91783pt.
- [35 <./images/final_integration_uml.png>]
+
+[36 <./images/architecture/final_integration_uml.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 132--144
 
  []
@@ -779,7 +786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
-[36]
+[37]
 
 ./chapters/4 Design and Implementation.tex:150: LaTeX Error: There's no line he
 re to end.
@@ -804,26 +811,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--165
 
  []
 
-[37]
-<images/movegraph_100.png, id=339, 3138.72626pt x 2326.6925pt>
-File: images/movegraph_100.png Graphic file (type png)
-<use images/movegraph_100.png>
-Package pdftex.def Info: images/movegraph_100.png  used on input line 196.
+[38]
+<images/tests/movegraph_100.png, id=508, 3138.72626pt x 2326.6925pt>
+File: images/tests/movegraph_100.png Graphic file (type png)
+<use images/tests/movegraph_100.png>
+Package pdftex.def Info: images/tests/movegraph_100.png  used on input line 196
+.
 (pdftex.def)             Requested size: 216.1011pt x 160.18694pt.
-<images/movegraph_100_cum.png, id=340, 3182.89125pt x 2307.62125pt>
-File: images/movegraph_100_cum.png Graphic file (type png)
-<use images/movegraph_100_cum.png>
-Package pdftex.def Info: images/movegraph_100_cum.png  used on input line 203.
+<images/tests/movegraph_100_cum.png, id=509, 3182.89125pt x 2307.62125pt>
+File: images/tests/movegraph_100_cum.png Graphic file (type png)
+<use images/tests/movegraph_100_cum.png>
+Package pdftex.def Info: images/tests/movegraph_100_cum.png  used on input line
+ 203.
 (pdftex.def)             Requested size: 216.1011pt x 156.6556pt.
-<images/movegraph_rand_70.png, id=341, 3157.7975pt x 2345.76375pt>
-File: images/movegraph_rand_70.png Graphic file (type png)
-<use images/movegraph_rand_70.png>
-Package pdftex.def Info: images/movegraph_rand_70.png  used on input line 212.
+<images/tests/movegraph_rand_70.png, id=510, 3157.7975pt x 2345.76375pt>
+File: images/tests/movegraph_rand_70.png Graphic file (type png)
+<use images/tests/movegraph_rand_70.png>
+Package pdftex.def Info: images/tests/movegraph_rand_70.png  used on input line
+ 212.
 (pdftex.def)             Requested size: 216.1011pt x 160.49773pt.
-<images/movegraph_rand_30.png, id=342, 3157.7975pt x 2307.62125pt>
-File: images/movegraph_rand_30.png Graphic file (type png)
-<use images/movegraph_rand_30.png>
-Package pdftex.def Info: images/movegraph_rand_30.png  used on input line 219.
+<images/tests/movegraph_rand_30.png, id=511, 3157.7975pt x 2307.62125pt>
+File: images/tests/movegraph_rand_30.png Graphic file (type png)
+<use images/tests/movegraph_rand_30.png>
+Package pdftex.def Info: images/tests/movegraph_rand_30.png  used on input line
+ 219.
 (pdftex.def)             Requested size: 216.1011pt x 157.888pt.
 
 ./chapters/4 Design and Implementation.tex:220: Missing $ inserted.
@@ -902,10 +913,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<images/movegraph_sys_70.png, id=343, 3125.6775pt x 2332.715pt>
-File: images/movegraph_sys_70.png Graphic file (type png)
-<use images/movegraph_sys_70.png>
-Package pdftex.def Info: images/movegraph_sys_70.png  used on input line 228.
+<images/tests/movegraph_sys_70.png, id=512, 3125.6775pt x 2332.715pt>
+File: images/tests/movegraph_sys_70.png Graphic file (type png)
+<use images/tests/movegraph_sys_70.png>
+Package pdftex.def Info: images/tests/movegraph_sys_70.png  used on input line 
+228.
 (pdftex.def)             Requested size: 216.1011pt x 161.27785pt.
 ./chapters/4 Design and Implementation.tex:229: Missing $ inserted.
 <inserted text> 
@@ -983,10 +995,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<images/movegraph_sys_30.png, id=344, 3247.13126pt x 2320.67pt>
-File: images/movegraph_sys_30.png Graphic file (type png)
-<use images/movegraph_sys_30.png>
-Package pdftex.def Info: images/movegraph_sys_30.png  used on input line 235.
+<images/tests/movegraph_sys_30.png, id=513, 3247.13126pt x 2320.67pt>
+File: images/tests/movegraph_sys_30.png Graphic file (type png)
+<use images/tests/movegraph_sys_30.png>
+Package pdftex.def Info: images/tests/movegraph_sys_30.png  used on input line 
+235.
 (pdftex.def)             Requested size: 216.1011pt x 154.42531pt.
 ./chapters/4 Design and Implementation.tex:236: Missing $ inserted.
 <inserted text> 
@@ -1067,8 +1080,8 @@ my insertion and my current dilemma will both disappear.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[38 <./images/movegraph_100.png> <./images/movegraph_100_cum.png> <./images/mov
-egraph_rand_70.png> <./images/movegraph_rand_30.png>]
+[39 <./images/tests/movegraph_100.png> <./images/tests/movegraph_100_cum.png> <
+./images/tests/movegraph_rand_70.png> <./images/tests/movegraph_rand_30.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 241--245
 
  []
@@ -1078,17 +1091,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 241--245
 
  []
 
-) (./chapters/5 Results and Analysis.tex [39 <./images/movegraph_sys_70.png> <.
-/images/movegraph_sys_30.png>]
+) (./chapters/5 Results and Analysis.tex [40 <./images/tests/movegraph_sys_70.p
+ng> <./images/tests/movegraph_sys_30.png>]
 Chapter 5.
-) (./chapters/6 Conclusion.tex [40
+) (./chapters/6 Conclusion.tex [41
 
 ]
 Chapter 6.
 )
 No file main.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-[41
+[42
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
@@ -1108,15 +1121,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 9741 strings out of 481239
- 143516 string characters out of 5920377
- 750749 words of memory out of 5000000
- 24627 multiletter control sequences out of 15000+600000
+ 9791 strings out of 481239
+ 145495 string characters out of 5920377
+ 751614 words of memory out of 5000000
+ 24674 multiletter control sequences out of 15000+600000
  541910 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,49p,1581b,1906s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1139,10 +1152,10 @@ s/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
 rm1095.pfb>
 Output written on /home/c4r4mel/pycharm_projects/royal_holloway/action_model_re
-construction_framework/MscDissertation/out/main.pdf (42 pages, 2275471 bytes).
+construction_framework/MscDissertation/out/main.pdf (43 pages, 2270768 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
- 182 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 549 compressed objects within 6 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 414 words of extra memory for PDF output out of 10000 (max. 10000000)
 
