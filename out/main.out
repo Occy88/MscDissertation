@@ -24,8 +24,8 @@
 \BOOKMARK [2][-]{subsection.3.1.2}{Scope of objectives}{section.3.1}% 24
 \BOOKMARK [1][-]{section.3.2}{Minimum use-case}{chapter.3}% 25
 \BOOKMARK [2][-]{subsection.3.2.1}{Defining baseline objectives}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.2}{Defining data collection standards}{section.3.2}% 27
-\BOOKMARK [1][-]{section.3.3}{Analysis}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.3}{Analysis}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.1}{Defining data collection standards}{section.3.3}% 28
 \BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 29
 \BOOKMARK [1][-]{section.4.1}{High level architecture}{chapter.4}% 30
 \BOOKMARK [1][-]{section.4.2}{Domain parsing and simulation modules}{chapter.4}% 31

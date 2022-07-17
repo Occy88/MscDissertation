@@ -3,38 +3,38 @@
 \contentsline {chapter}{\numberline {2}Background and Theory}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Modelling Domains}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}STRIPS}{8}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}PDDL}{8}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Parsers}{9}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Solvers}{11}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Markov Logic Networks}{11}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Markov Networks}{12}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}First-Order Logic (KB)}{13}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Markov Logic Networks}{13}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Evaluating Models}{14}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Existing work}{16}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Support for various domain languages in python}{16}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Synthetic generation of training data}{17}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Simplified implementation of learning models}{18}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Extendable modules for conversion of training output to a standard action model}{19}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}Testing learned action models}{19}{subsection.2.6.5}%
-\contentsline {chapter}{\numberline {3}Methodology}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Problem Scope}{21}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Environment and accessibility}{21}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Scope of objectives}{23}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Minimum use-case}{27}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Defining baseline objectives}{27}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Defining data collection standards}{27}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Analysis}{28}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Design and Implementation}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}High level architecture}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Domain parsing and simulation modules}{30}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Learning model interface}{34}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Evaluation module}{35}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Final integration}{36}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Integrating MLN Learner module}{37}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Training and reconstruction of STRIPS action models}{37}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Proof of concept}{38}{subsection.4.7.1}%
-\contentsline {section}{\numberline {4.8}Tests}{38}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Tracking weights}{39}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Results and Analysis}{41}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{42}{chapter.6}%
+\contentsline {subsection}{\numberline {2.1.2}PDDL}{9}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Parsers}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Solvers}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Markov Logic Networks}{12}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Markov Networks}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}First-Order Logic (KB)}{14}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Markov Logic Networks}{14}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Evaluating Models}{15}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Existing work}{17}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Support for various domain languages in python}{17}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Synthetic generation of training data}{18}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Simplified implementation of learning models}{19}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Extendable modules for conversion of training output to a standard action model}{20}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}Testing learned action models}{20}{subsection.2.6.5}%
+\contentsline {chapter}{\numberline {3}Methodology}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problem Scope}{22}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Environment and accessibility}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Scope of objectives}{24}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Minimum use-case}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Defining baseline objectives}{29}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Analysis}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Defining data collection standards}{30}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Design and Implementation}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}High level architecture}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Domain parsing and simulation modules}{32}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Learning model interface}{36}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Evaluation module}{37}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Final integration}{38}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Integrating MLN Learner module}{39}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Training and reconstruction of STRIPS action models}{39}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Proof of concept}{40}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}Tests}{40}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Tracking weights}{41}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Results and Analysis}{43}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{44}{chapter.6}%
