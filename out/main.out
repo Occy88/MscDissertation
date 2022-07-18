@@ -25,17 +25,16 @@
 \BOOKMARK [1][-]{section.3.2}{Minimum use-case}{chapter.3}% 25
 \BOOKMARK [2][-]{subsection.3.2.1}{Defining baseline objectives}{section.3.2}% 26
 \BOOKMARK [1][-]{section.3.3}{Analysis}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.1}{Defining data collection standards}{section.3.3}% 28
-\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 29
-\BOOKMARK [1][-]{section.4.1}{High level architecture}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Domain parsing and simulation modules}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Learning model interface}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.4}{Evaluation module}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.5}{Final integration}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.6}{Integrating MLN Learner module}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.7}{Training and reconstruction of STRIPS action models}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.7.1}{Proof of concept}{section.4.7}% 37
-\BOOKMARK [1][-]{section.4.8}{Tests}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.9}{Tracking weights}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter.5}{Results and Analysis}{}% 40
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 41
+\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 28
+\BOOKMARK [1][-]{section.4.1}{High level architecture}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Domain parsing and simulation modules}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.3}{Learning model interface}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.4}{Evaluation module}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.5}{Final integration}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.6}{Integrating MLN Learner module}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.7}{Training and reconstruction of STRIPS action models}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.7.1}{Proof of concept}{section.4.7}% 36
+\BOOKMARK [1][-]{section.4.8}{Tests}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.9}{Tracking weights}{chapter.4}% 38
+\BOOKMARK [0][-]{chapter.5}{Results and Analysis}{}% 39
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 40

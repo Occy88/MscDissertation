@@ -24,17 +24,16 @@
 \contentsline {section}{\numberline {3.2}Minimum use-case}{29}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Defining baseline objectives}{29}{subsection.3.2.1}%
 \contentsline {section}{\numberline {3.3}Analysis}{30}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Defining data collection standards}{30}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {4}Design and Implementation}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}High level architecture}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Domain parsing and simulation modules}{32}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Learning model interface}{36}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Evaluation module}{37}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Final integration}{38}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Integrating MLN Learner module}{39}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Training and reconstruction of STRIPS action models}{39}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Proof of concept}{40}{subsection.4.7.1}%
-\contentsline {section}{\numberline {4.8}Tests}{40}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Tracking weights}{41}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Results and Analysis}{43}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{44}{chapter.6}%
+\contentsline {chapter}{\numberline {4}Design and Implementation}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}High level architecture}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Domain parsing and simulation modules}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Learning model interface}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Evaluation module}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Final integration}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Integrating MLN Learner module}{40}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Training and reconstruction of STRIPS action models}{40}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Proof of concept}{41}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}Tests}{41}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Tracking weights}{42}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Results and Analysis}{44}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}%
