@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.18)  17 JUL 2022 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.6.18)  20 JUL 2022 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,7 +569,7 @@ LaTeX Warning: Citation `pddl21:online' on page 9 undefined on input line 62.
 LaTeX Warning: Citation `pddl22:online' on page 9 undefined on input line 62.
 
 [9]
-<images/architecture/parserflow.png, id=282, 145.54375pt x 407.5225pt>
+<images/architecture/parserflow.png, id=287, 145.54375pt x 407.5225pt>
 File: images/architecture/parserflow.png Graphic file (type png)
 <use images/architecture/parserflow.png>
 Package pdftex.def Info: images/architecture/parserflow.png  used on input line
@@ -618,7 +618,7 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 [14] [15]
-<images/Selection_019.png, id=321, 882.29625pt x 322.20375pt>
+<images/Selection_019.png, id=326, 882.29625pt x 322.20375pt>
 File: images/Selection_019.png Graphic file (type png)
 <use images/Selection_019.png>
 Package pdftex.def Info: images/Selection_019.png  used on input line 165.
@@ -655,34 +655,34 @@ Chapter 3.
 [21
 
 ]
-<images/architecture/git-flow.png, id=349, 456.20438pt x 207.77625pt>
+<images/architecture/git-flow.png, id=354, 456.20438pt x 207.77625pt>
 File: images/architecture/git-flow.png Graphic file (type png)
 <use images/architecture/git-flow.png>
 Package pdftex.def Info: images/architecture/git-flow.png  used on input line 2
 2.
 (pdftex.def)             Requested size: 441.01773pt x 200.86423pt.
  [22 <./images/architecture/git-flow.png>] [23]
-<images/architecture/parser_uml.png, id=362, 711.65875pt x 420.57124pt>
+<images/architecture/parser_uml.png, id=367, 711.65875pt x 420.57124pt>
 File: images/architecture/parser_uml.png Graphic file (type png)
 <use images/architecture/parser_uml.png>
 Package pdftex.def Info: images/architecture/parser_uml.png  used on input line
  41.
 (pdftex.def)             Requested size: 441.01773pt x 260.62955pt.
  [24 <./images/architecture/parser_uml.png>]
-<images/architecture/data_generator_uml.png, id=369, 450.68375pt x 419.5675pt>
+<images/architecture/data_generator_uml.png, id=374, 450.68375pt x 419.5675pt>
 File: images/architecture/data_generator_uml.png Graphic file (type png)
 <use images/architecture/data_generator_uml.png>
 Package pdftex.def Info: images/architecture/data_generator_uml.png  used on in
 put line 49.
 (pdftex.def)             Requested size: 308.71106pt x 287.4084pt.
-<images/architecture/learning_model_uml.png, id=371, 451.6875pt x 440.64626pt>
+<images/architecture/learning_model_uml.png, id=376, 451.6875pt x 440.64626pt>
 File: images/architecture/learning_model_uml.png Graphic file (type png)
 <use images/architecture/learning_model_uml.png>
 Package pdftex.def Info: images/architecture/learning_model_uml.png  used on in
 put line 63.
 (pdftex.def)             Requested size: 308.71106pt x 301.18193pt.
  [25 <./images/architecture/data_generator_uml.png>]
-<images/architecture/action_model_reconstructor_uml.png, id=377, 620.3175pt x 2
+<images/architecture/action_model_reconstructor_uml.png, id=382, 620.3175pt x 2
 57.96375pt>
 File: images/architecture/action_model_reconstructor_uml.png Graphic file (type
  png)
@@ -695,7 +695,7 @@ Package pdftex.def Info: images/architecture/action_model_reconstructor_uml.png
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26 <./images/architecture/learning_model_uml.png>]
-<images/architecture/domain_simulator.png, id=383, 279.0425pt x 312.16624pt>
+<images/architecture/domain_simulator.png, id=388, 279.0425pt x 312.16624pt>
 File: images/architecture/domain_simulator.png Graphic file (type png)
 <use images/architecture/domain_simulator.png>
 Package pdftex.def Info: images/architecture/domain_simulator.png  used on inpu
@@ -705,59 +705,51 @@ t line 79.
 tecture/domain_simulator.png>] [28] [29] [30]) (./chapters/4 Design and Impleme
 ntation.tex [31]
 Chapter 4.
-<images/architecture/Core Architecture.png, id=412, 454.19687pt x 227.34938pt>
+<images/architecture/Core Architecture.png, id=417, 454.19687pt x 227.34938pt>
 File: images/architecture/Core Architecture.png Graphic file (type png)
 <use images/architecture/Core Architecture.png>
 Package pdftex.def Info: images/architecture/Core Architecture.png  used on inp
-ut line 10.
+ut line 22.
 (pdftex.def)             Requested size: 308.71106pt x 154.52614pt.
 [32
 
  <./images/architecture/Core Architecture.PNG>]
 
-LaTeX Warning: Citation `pddl21:online' on page 33 undefined on input line 16.
+LaTeX Warning: Citation `pddl21:online' on page 33 undefined on input line 33.
 
-<images/architecture/parser_dir.png, id=420, 157.08687pt x 168.63pt>
+<images/architecture/parser_dir.png, id=425, 157.08687pt x 168.63pt>
 File: images/architecture/parser_dir.png Graphic file (type png)
 <use images/architecture/parser_dir.png>
 Package pdftex.def Info: images/architecture/parser_dir.png  used on input line
- 19.
+ 37.
 (pdftex.def)             Requested size: 132.30666pt x 142.03418pt.
 
-LaTeX Warning: Citation `pddl21:online' on page 33 undefined on input line 26.
+LaTeX Warning: Citation `pddl21:online' on page 33 undefined on input line 46.
 
 [33 <./images/architecture/parser_dir.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 36.
+nput line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) [34] [35]
-[36]
-<images/architecture/learning_module_interaction_uml.png, id=507, 689.57625pt x
+[36] [37]
+<images/architecture/learning_module_interaction_uml.png, id=560, 689.57625pt x
  261.97874pt>
 File: images/architecture/learning_module_interaction_uml.png Graphic file (typ
 e png)
 <use images/architecture/learning_module_interaction_uml.png>
 Package pdftex.def Info: images/architecture/learning_module_interaction_uml.pn
-g  used on input line 112.
+g  used on input line 199.
 (pdftex.def)             Requested size: 441.01773pt x 167.5499pt.
- [37 <./images/architecture/learning_module_interaction_uml.png>] [38]
-<images/architecture/final_integration_uml.png, id=517, 437.13312pt x 349.80687
-pt>
-File: images/architecture/final_integration_uml.png Graphic file (type png)
-<use images/architecture/final_integration_uml.png>
-Package pdftex.def Info: images/architecture/final_integration_uml.png  used on
- input line 125.
-(pdftex.def)             Requested size: 441.01773pt x 352.91783pt.
-
-[39 <./images/architecture/final_integration_uml.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 132--144
+ [38 <./images/architecture/learning_module_interaction_uml.png>]
+[39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 279--291
 
  []
 
 
-Overfull \hbox (15.65714pt too wide) in paragraph at lines 132--144
+Overfull \hbox (15.65714pt too wide) in paragraph at lines 279--291
 \OT1/cmr/m/n/10.95 We de-fine a valid database $\OML/cmm/m/it/10.95 D$ \OT1/cmr
 /m/n/10.95 by $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 a; S[]\OMS/cmsy/m/n/10.
 95 g$ \OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 S[]$ \OT1/cmr/m/n/10.95 is 
@@ -766,93 +758,113 @@ OML/cmm/m/it/10.95 p[]; f \OMS/cmsy/m/n/10.95 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--144
+Underfull \hbox (badness 10000) in paragraph at lines 279--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--144
+Underfull \hbox (badness 10000) in paragraph at lines 279--291
 
  []
 
 
-Overfull \hbox (1.02873pt too wide) in paragraph at lines 144--144
+Overfull \hbox (1.02873pt too wide) in paragraph at lines 291--291
 []\OT1/cmss/bx/n/17.28 Training and re-con-struc-tion of STRIPS ac-tion mod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
 
-[40]
+[41]
 
-./chapters/4 Design and Implementation.tex:150: LaTeX Error: There's no line he
+./chapters/4 Design and Implementation.tex:297: LaTeX Error: There's no line he
 re to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.150 \newline
+l.297 \newline
               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--157
+Underfull \hbox (badness 10000) in paragraph at lines 298--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--165
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
 
  []
 
-[41]
-<images/tests/movegraph_100.png, id=532, 3138.72626pt x 2326.6925pt>
+[42] [43]
+<images/architecture/final_integration_uml.png, id=637, 437.13312pt x 349.80687
+pt>
+File: images/architecture/final_integration_uml.png Graphic file (type png)
+<use images/architecture/final_integration_uml.png>
+Package pdftex.def Info: images/architecture/final_integration_uml.png  used on
+ input line 324.
+(pdftex.def)             Requested size: 441.01773pt x 352.91783pt.
+ [44 <./images/architecture/final_integration_uml.png>])
+(./chapters/5 Results and Analysis.tex [45]
+Chapter 5.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 5.
+
+[46
+
+]
+<images/tests/movegraph_100.png, id=692, 3138.72626pt x 2326.6925pt>
 File: images/tests/movegraph_100.png Graphic file (type png)
 <use images/tests/movegraph_100.png>
-Package pdftex.def Info: images/tests/movegraph_100.png  used on input line 196
-.
+Package pdftex.def Info: images/tests/movegraph_100.png  used on input line 66.
+
 (pdftex.def)             Requested size: 216.1011pt x 160.18694pt.
-<images/tests/movegraph_100_cum.png, id=533, 3182.89125pt x 2307.62125pt>
+<images/tests/movegraph_100_cum.png, id=693, 3182.89125pt x 2307.62125pt>
 File: images/tests/movegraph_100_cum.png Graphic file (type png)
 <use images/tests/movegraph_100_cum.png>
 Package pdftex.def Info: images/tests/movegraph_100_cum.png  used on input line
- 203.
+ 73.
 (pdftex.def)             Requested size: 216.1011pt x 156.6556pt.
-<images/tests/movegraph_rand_70.png, id=534, 3157.7975pt x 2345.76375pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/tests/movegraph_rand_70.png, id=694, 3157.7975pt x 2345.76375pt>
 File: images/tests/movegraph_rand_70.png Graphic file (type png)
 <use images/tests/movegraph_rand_70.png>
 Package pdftex.def Info: images/tests/movegraph_rand_70.png  used on input line
- 212.
+ 82.
 (pdftex.def)             Requested size: 216.1011pt x 160.49773pt.
-<images/tests/movegraph_rand_30.png, id=535, 3157.7975pt x 2307.62125pt>
+<images/tests/movegraph_rand_30.png, id=695, 3157.7975pt x 2307.62125pt>
 File: images/tests/movegraph_rand_30.png Graphic file (type png)
 <use images/tests/movegraph_rand_30.png>
 Package pdftex.def Info: images/tests/movegraph_rand_30.png  used on input line
- 219.
+ 89.
 (pdftex.def)             Requested size: 216.1011pt x 157.888pt.
-
-./chapters/4 Design and Implementation.tex:220: Missing $ inserted.
+./chapters/5 Results and Analysis.tex:90: Missing $ inserted.
 <inserted text> 
                 $
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chapters/4 Design and Implementation.tex:220: Extra }, or forgotten $.
+./chapters/5 Results and Analysis.tex:90: Extra }, or forgotten $.
 <argument> ...N, .7 rand noise on){fig:mv_100_cum}
                                                   \fi 
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -860,18 +872,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./chapters/4 Design and Implementation.tex:220: Missing $ inserted.
+./chapters/5 Results and Analysis.tex:90: Missing $ inserted.
 <inserted text> 
                 $
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chapters/4 Design and Implementation.tex:220: Missing } inserted.
+./chapters/5 Results and Analysis.tex:90: Missing } inserted.
 <inserted text> 
                 }
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -879,18 +891,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./chapters/4 Design and Implementation.tex:220: Missing $ inserted.
+./chapters/5 Results and Analysis.tex:90: Missing $ inserted.
 <inserted text> 
                 $
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chapters/4 Design and Implementation.tex:220: Extra }, or forgotten $.
+./chapters/5 Results and Analysis.tex:90: Extra }, or forgotten $.
 <argument> ...N, .7 rand noise on){fig:mv_100_cum}
                                                   \fi 
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -898,182 +910,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./chapters/4 Design and Implementation.tex:220: Missing $ inserted.
+./chapters/5 Results and Analysis.tex:90: Missing $ inserted.
 <inserted text> 
                 $
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./chapters/4 Design and Implementation.tex:220: Missing } inserted.
+./chapters/5 Results and Analysis.tex:90: Missing } inserted.
 <inserted text> 
                 }
-l.220 ...n MLN, .7 rand noise on){fig:mv_100_cum}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<images/tests/movegraph_sys_70.png, id=536, 3125.6775pt x 2332.715pt>
-File: images/tests/movegraph_sys_70.png Graphic file (type png)
-<use images/tests/movegraph_sys_70.png>
-Package pdftex.def Info: images/tests/movegraph_sys_70.png  used on input line 
-228.
-(pdftex.def)             Requested size: 216.1011pt x 161.27785pt.
-./chapters/4 Design and Implementation.tex:229: Missing $ inserted.
-<inserted text> 
-                $
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:229: Extra }, or forgotten $.
-<argument> ... noise on conn(v0,v1,0) {fig:mv_100}
-                                                  \fi 
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/4 Design and Implementation.tex:229: Missing $ inserted.
-<inserted text> 
-                $
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:229: Missing } inserted.
-<inserted text> 
-                }
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/4 Design and Implementation.tex:229: Missing $ inserted.
-<inserted text> 
-                $
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:229: Extra }, or forgotten $.
-<argument> ... noise on conn(v0,v1,0) {fig:mv_100}
-                                                  \fi 
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/4 Design and Implementation.tex:229: Missing $ inserted.
-<inserted text> 
-                $
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:229: Missing } inserted.
-<inserted text> 
-                }
-l.229 ... sys noise on conn(v0,v1,0) {fig:mv_100}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<images/tests/movegraph_sys_30.png, id=537, 3247.13126pt x 2320.67pt>
-File: images/tests/movegraph_sys_30.png Graphic file (type png)
-<use images/tests/movegraph_sys_30.png>
-Package pdftex.def Info: images/tests/movegraph_sys_30.png  used on input line 
-235.
-(pdftex.def)             Requested size: 216.1011pt x 154.42531pt.
-./chapters/4 Design and Implementation.tex:236: Missing $ inserted.
-<inserted text> 
-                $
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:236: Extra }, or forgotten $.
-<argument> ...ise on conn(v0,v1,0){fig:mv_100_cum}
-                                                  \fi 
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/4 Design and Implementation.tex:236: Missing $ inserted.
-<inserted text> 
-                $
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:236: Missing } inserted.
-<inserted text> 
-                }
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/4 Design and Implementation.tex:236: Missing $ inserted.
-<inserted text> 
-                $
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:236: Extra }, or forgotten $.
-<argument> ...ise on conn(v0,v1,0){fig:mv_100_cum}
-                                                  \fi 
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/4 Design and Implementation.tex:236: Missing $ inserted.
-<inserted text> 
-                $
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/4 Design and Implementation.tex:236: Missing } inserted.
-<inserted text> 
-                }
-l.236 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+l.90 ...on MLN, .7 rand noise on){fig:mv_100_cum}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1084,28 +932,192 @@ my insertion and my current dilemma will both disappear.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42 <./images/tests/movegraph_100.png> <./images/tests/movegraph_100_cum.png> <
+<images/tests/movegraph_sys_70.png, id=696, 3125.6775pt x 2332.715pt>
+File: images/tests/movegraph_sys_70.png Graphic file (type png)
+<use images/tests/movegraph_sys_70.png>
+Package pdftex.def Info: images/tests/movegraph_sys_70.png  used on input line 
+98.
+(pdftex.def)             Requested size: 216.1011pt x 161.27785pt.
+./chapters/5 Results and Analysis.tex:99: Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:99: Extra }, or forgotten $.
+<argument> ... noise on conn(v0,v1,0) {fig:mv_100}
+                                                  \fi 
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapters/5 Results and Analysis.tex:99: Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:99: Missing } inserted.
+<inserted text> 
+                }
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./chapters/5 Results and Analysis.tex:99: Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:99: Extra }, or forgotten $.
+<argument> ... noise on conn(v0,v1,0) {fig:mv_100}
+                                                  \fi 
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapters/5 Results and Analysis.tex:99: Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:99: Missing } inserted.
+<inserted text> 
+                }
+l.99 ...3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/tests/movegraph_sys_30.png, id=697, 3247.13126pt x 2320.67pt>
+File: images/tests/movegraph_sys_30.png Graphic file (type png)
+<use images/tests/movegraph_sys_30.png>
+Package pdftex.def Info: images/tests/movegraph_sys_30.png  used on input line 
+105.
+(pdftex.def)             Requested size: 216.1011pt x 154.42531pt.
+./chapters/5 Results and Analysis.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:106: Extra }, or forgotten $.
+<argument> ...ise on conn(v0,v1,0){fig:mv_100_cum}
+                                                  \fi 
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapters/5 Results and Analysis.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:106: Missing } inserted.
+<inserted text> 
+                }
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./chapters/5 Results and Analysis.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:106: Extra }, or forgotten $.
+<argument> ...ise on conn(v0,v1,0){fig:mv_100_cum}
+                                                  \fi 
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapters/5 Results and Analysis.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapters/5 Results and Analysis.tex:106: Missing } inserted.
+<inserted text> 
+                }
+l.106 ...s noise on conn(v0,v1,0){fig:mv_100_cum}}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[47]) (./chapters/6 Conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 111--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--1
+
+ []
+
+[48 <./images/tests/movegraph_100.png> <./images/tests/movegraph_100_cum.png> <
 ./images/tests/movegraph_rand_70.png> <./images/tests/movegraph_rand_30.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 241--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--245
-
- []
-
-) (./chapters/5 Results and Analysis.tex [43 <./images/tests/movegraph_sys_70.p
-ng> <./images/tests/movegraph_sys_30.png>]
-Chapter 5.
-) (./chapters/6 Conclusion.tex [44
-
+[49 <./images/tests/movegraph_sys_70.png> <./images/tests/movegraph_sys_30.png>
 ]
 Chapter 6.
 )
 No file main.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-[45
+[50
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
@@ -1130,10 +1142,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 9798 strings out of 481239
- 145464 string characters out of 5920377
- 751672 words of memory out of 5000000
- 24665 multiletter control sequences out of 15000+600000
+ 10024 strings out of 481239
+ 148770 string characters out of 5920377
+ 751646 words of memory out of 5000000
+ 24753 multiletter control sequences out of 15000+600000
  541910 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,49p,1283b,1906s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1156,10 +1168,10 @@ s/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
 rm1095.pfb>
 Output written on /home/c4r4mel/pycharm_projects/royal_holloway/action_model_re
-construction_framework/MscDissertation/out/main.pdf (46 pages, 2295388 bytes).
+construction_framework/MscDissertation/out/main.pdf (51 pages, 2318989 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 571 compressed objects within 6 object streams
- 199 named destinations out of 1000 (max. 500000)
- 411 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 861 PDF objects out of 1000 (max. 8388607)
+ 753 compressed objects within 8 object streams
+ 337 named destinations out of 1000 (max. 500000)
+ 419 words of extra memory for PDF output out of 10000 (max. 10000000)
 

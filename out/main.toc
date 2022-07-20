@@ -27,13 +27,15 @@
 \contentsline {chapter}{\numberline {4}Design and Implementation}{32}{chapter.4}%
 \contentsline {section}{\numberline {4.1}High level architecture}{32}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Domain parsing and simulation modules}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Learning model interface}{37}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Evaluation module}{38}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Final integration}{39}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Integrating MLN Learner module}{40}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Training and reconstruction of STRIPS action models}{40}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Proof of concept}{41}{subsection.4.7.1}%
-\contentsline {section}{\numberline {4.8}Tests}{41}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Tracking weights}{42}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Results and Analysis}{44}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}%
+\contentsline {subsection}{\numberline {4.2.1}Parsing module}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Simulation module}{36}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Learning model interface and implementation}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Integrating MLN Learner module}{41}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Training and reconstruction of STRIPS action models}{41}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Evaluation module}{43}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Final integration}{44}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Tests and Analysis}{46}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Framework metrics}{46}{subsection.5.0.1}%
+\contentsline {section}{\numberline {5.1}Tests}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Tracking weights}{47}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion}{50}{chapter.6}%
