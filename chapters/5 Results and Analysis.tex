@@ -1,65 +1,159 @@
-\chapter{Tests and Analysis}
+\chapter{Analysis and Review}
 In this chapter we will review the goals set out in chapter 3.3 Analysis and to what extent these have been achieved, where success was observed and where failures occured and what improvements could be made.
 We will first review the metrics associated with the framework then with the use of the framework and finally we will review some output produced with our sample project.
 \section{Metrics report}
 \subsection{Framework - Reliability}
-As there is no active use of the framework, the only viabile data for reliability of the framework is our active development and test coverage data.
+As there is no active use of the framework, the only viable data for reliability of the framework is our active development bug tracking, test coverage data and code scene analysis.
 Framework test coverage is at \(95\%\) code coverage which is respectable.
 There are no active bugs currently identified, and non-trivial code contains documentation.
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\textwidth]{images/code/Selection_062}
+ \caption{Code health analysis Code Scene}
+ \label{fig:code-health}
+\end{figure}
+Considering the 28,000 lines of code (including some patched work on open-source projects) a health score of 9.7 can be considered as excellent hence we are satisfied with the reliability.
+\newpage
+\subsection{Framework - Maintainability}
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.7\textwidth]{images/code/hotspot}
+ \caption{Code maintenance cost (green = low, red = high)}
+ \label{fig:hotspots}
+\end{figure}
+Above is a code-hotspot visualisation meant to visualise the difficulty of maintaining the active code-base, each colored circle represents a file, whilst grey layers represent directories/modules.
+The large circle in the top half contains the FFXSolver module, we can observe that the code bellow developed for the purpose of the framework is kept in a maintainable state (green).
+This visualisation is generated using automated metrics for file and code complexity.
+We can also observe that as stated, each module (simulator, learn, parser, generator) represented by the first layer of smaller light gray circles to the left, are kept completely isolated this is important as there should be no coupling between these.
+It can be concluded that for the code associated with the framework, the maintenance cost is low.
 
+\subsection{Framework - Testability}
+As previously mentioned we have achieved \(95\%\) test coverage over all code for unit tests.
+We have also included integration tests with the various open-source tools used such as the solvers and learning models.
+For maintaining a high testing standards, we deployed a testing pipeline making use of github actions to ensure that new code is tested before being merged into the codebase.
+Other functional tests such as smoke tests were not performed as these are simply not required at this stage.
+If more users adopt the use of the repository then such tests will be adopted.
+There are currently no seriously lacking forms of necessary tests.
 
-Maintainability.
-Is the software difficult to maintain?
-This can be determined by analysing code complexity, structure, size and consistency.
-Various automated tools are available such as Codescene, which provide real values to these metrics using various automated analysis tools.
+\subsection{Framework - Portability}.
+We have set a pipeline ensuring that functionality is supported across all major python versions from 3.6 onwards.
+The pipeline also includes test execution on Linux, Windows and Mac OS to ensure the portability across these operating systems.
 
-Testability.
-This metric represents how much test coverage there is over the software produced, and what tests other than functional are being run.
-Many layers of testing exist, such as functional, smoke,  unit, integration and end-to-end tests are just some of these.
-Our aim is to cover which layers we have included, and the reasons for doing so, as well as provide the relevant data on coverage.
+Portability to languages other than Python is non-existent as it is too early in the project to do so and the initial design specification justified the use of python as the primary language.
 
-Portability.
-It is associated with how many environments can adopt the codebase and take advantage of it.
-Higher portability is often preferred as it means there is less overhead when adopting the code.
-A good example of a highly portable software product is Docker, it allows code to be run in any environment using os-level virtualization.
+\subsection{Framework - Reusability}
+As observed in figure\ref{fig:hotspots} the codebase is written with modularity in mind.
+We have also demonstrated in our demo project that each module can be used independently for use-cases other than the ones we used them for.
+We have further tested using the PDDL simulator separately for other projects to develop simple solving algorithms in python.
+This presents a potential use-case for student's learning these topics to have access to the full power of PDDL and the simplicity of python when designing domains and solvers.
 
-Reusability.
-Checks if the code written can be reused.
-This is often the case with decoupled and modular systems.
-An example could be how a system managing user accounts can be re-used accross multiple products provided by a single company as functionality is most likely the same.
-It is important to design code with reusability in mind as it allows the open-source community to improve smaller modules which individual users take interest in.
+\subsection{User - Adoption friction}
+The sample user project provided in chapter 4.3 code-snippet\ref{example-project} exemplifies the adoption friction a user will face when using our modules.
+It is clear that working with PDDL and associated tools such as solvers is now much more straight forward as the only requirement is to have a domain file and a problem file to achieve functionality that was previously not possible.
 
+\subsection{User - Learning curve}
+We have kept the learning curve to a minimum.
+In order to use the tools we have developed, a user must understand the basics of PDDL to be able to generate their own domain files, and problem files, as well as enough python to have a grasp of basic data structures.
+A sample project and domain was created specifically for new users to get accustomed to the tools available.
+We will expand these basic examples in the future in order to best demonstrate the available capabilities because we have not provided an online documentation page as of yet.
+We are however lacking in comparison to more established projects as there is yet to be a public release on pypi for easier discovery.
 
-With respect to users of the framework, we chose the following metrics:
+\subsection{User - Development complexity}
+Our demo project shows that no user-level files require high cyclomatic complexity (code branching factor) in the expected workflow.
+We have also integrated the mccabe library to generate warning when complexity exceeds thresholds set by the PEP-8 standard by using the flake8 package in our workflow\cite{Flake8—f13:online}.
+This is in line with modern frameworks, hence we can say it is a success.
+The LOC count is also bellow 50 in all important integrations such as the DataGenarators or demo project files, which is important for reducing complexity and ensuring that the necessary functionality can be achieved efficiently with the available utility tools we provided.
 
-Adoption Friction.
-It represents the barrier that users face when trying to adopt the software.
-A simple example with respect to the Planning field would be how the lack of a PDDL to Python parser prevents a user proficient in python from experimenting with PDDL.
-An example of the effort that the planning community has gone through in order to reduce the barrier is providing the rules for parsing the PDDL Language.
-Our aim is to reduce the Adoption Friction users will have with adopting the use of our platform.
-Why should a researcher already using a custom environment switch to using our platform?
+\section{Sample project review}
+In this section we will review the functionality we have provided and data we have produced with it.
+As we stated, this demo project's goal is to train a set of Markov Logic Networks representing PDDL Actions in Python given a dataset that we synthetically engineer from any defined domain.
 
-Learning Curve.
-This refers to how difficult it is for a third-party to start being productive with the software we provide.
-We strive to minimise the Learning Curve by leveraging complexity and providing well documented examples.
-A low learning curve means that new users with little understanding of fundementals will be able to adopt powerful tools that would otherwise take years to understand their theory.
-An example would be the ease of training a CNN using Tensorflow as a user can copy paste widely available examples and simply experiment with different numbers.
+The first step is to generate a random dataset of problem files for our pddl domain so we can use their solutions as training data for the MLN.
+From the frameworks generators module we have the following available domains from the IPC competition, more can be added following the specified rules:
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.4\textwidth]{images/code/generators}
+ \caption{Integrated domains available for use}
+ \label{fig:generators}
+\end{figure}
 
-Development Complexity.
-We included this metric because we want to ensure that no matter the level of user adopting the framework, the LOC (lines of code), and Cyclomatic complexity remains as low as possible.
-This ensures that projects involving users that are not well versed in software engineering practices are able to use the framework in a safe and scalable way, whilst maximising legibility.
+To generate the necessary files for a domain such as Grid World, we can simply import the relevant generator and generate the problem files into our desired directory, flags for more or less complexity during generation can be specified.
 
-\section{Tests}
-we can track weights with varying noise in the databases. Systematic noise can be added by removing a target set of predicates with a given probability. And Random noise can be added by removing any given predicate by a defined probability.
+\begin{lstlisting}[language=Python]
+from generator.generator import GridWorldGenerator
+GridWorldGenerator.generate_data(output_dir=PROBLEM_STATE_DSET_DIR)
+\end{lstlisting}
 
-Accuracy
+The generated files are saved to the directory:
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.4\textwidth]{images/code/problem_states}
+ \caption{problem files generated}
+ \label{fig:problem files}
+\end{figure}
+
+Similarly to how we generated problems, we can now generate solutions using one of the available solvers from our solving module:
+
+\begin{lstlisting}[language=Python]
+from solvers.solvers import FFXSolver
+FFXSolver.solve_problem_dir(
+    domain_file=DOMAIN_FILE,
+    problem_dir=PROBLEM_STATE_DSET_DIR,
+    output_dir=PROBLEM_SOLUTION_DIR,
+)
+\end{lstlisting}
+This will generate one solution file for each problem in the directory specified.
+Now that we have generated the necessary data to create our MLN dataset which relies on plan traces as opposed to simply plans without intermediate states, we can use the simulation module in order to execute a plan on the initial problem state:
+\begin{lstlisting}[language=Python]
+parsed = parse_pddl(domain_file)
+problem = parse_state(f"{problem_state_dir}/state_{i}")
+plan = parse_plan(f"{problem_solution_dir}/state_{i}")
+state = State(parsed)
+state.set_init_state(problem["init"])
+for index, s in enumerate(plan["steps"]):
+    p = Predicate(**s["predicate"])
+    state.perform_action(p)
+\end{lstlisting}
+
+The above code is a simplified version in order to provide an indication of how a user can simulate a plan on an initial state.
+For each sate and problem we generate an MLN database compatiblible with the learning module an abstraction is provided for simplicity:
+\begin{lstlisting}[language=Python]
+write_dbs(
+    domain_file=DOMAIN_FILE,
+    problem_state_dir=PROBLEM_STATE_DSET_DIR,
+    problem_solution_dir=PROBLEM_SOLUTION_DIR,
+    mln_db_path=MLN_DATABASE,
+)
+\end{lstlisting}
+
+Finally we can train the model with the generated dataset:
+\begin{lstlisting}[language=Python]
+MLNDeclarationGenerator.gen(DOMAIN_FILE, DOMAIN_P_DECS)
+model = PracmlnLearningModel(mln_database_path=MLN_DATABASE, domain_p_decs_path=DOMAIN_P_DECS)
+model.train()
+\end{lstlisting}
+
+The above workflow demonstrates how straight forward it is to use each module.
+We want to ensure that the way data is being manipulated, and managed is clear and concise, this is important because when users move towards gigabytes of data and thousands of files, any mistake can be extremely costly space-wise, computationally and time-wise for the user.
+Complex algorithms such as PracmlnLearningModel are abstracted out by the developer/researcher of such models and a familiar interface is exposed to the user, now anyone can train a model in the Planning domain just as they would in the Machin Learning or Deep Learning domain.
+
+\section{Evaluating trained model}
+In this section we will evaluate the model we have trained.
+To evaluate the model we track the change in weights for each predicate associated with an MLN representing an action in the domain.
+If the value of a weight increases, then it means that the predicate has a higher likelihood of being applied in the action model.
+
+We can test the robustness of the Network by applying noise (both systematic and random) to the database at different thresholds.
+Systematic noise can be added by removing a target set of predicates with a given probability.
+And Random noise can be added by removing any given predicate by a defined probability.
+
 We measure accuracy by analysing how similar a derived logic network is to the expected logic network which we can construct. We can calculate the error rate for \(a_{pre}\) by the following formula:
 \[E(a_{pre})=\frac{a_{pre}\cap \{p\in MLN_{|(f\in p) =0}\}|}{\max( |a_{pre}|,|p\in MLN|)}\]
 The same formula can be applied for \(a_{add},a_{del}\) simply by replacing the 0 with 1 and -1 respectively. The total error of the resulting MLN is the average of the above three errors expressed by the equation bellow.
 \[E(MLN)=\frac{sum(E(a_{pre}),E(a_{del}),E(a_{add}))}{3}\]
 
-\section{Tracking weights}
+
 As a preliminary experiment, weights were pruned due to the excessive time it took to train the MLN, this means only the predicates that are related to the action model are being trained.
+The effect of pruning predicates is that none of the weights in the network should be negative unless affected by noise.
 I have also included the cumulative weights (sum of independently trained MLN's for each database and action model.
 
 

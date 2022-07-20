@@ -368,12 +368,12 @@ MLNDeclarationGenerator.gen(DOMAIN_FILE, DOMAIN_P_DECS)
 # instantiate and train model
 model = PracmlnLearningModel(mln_database_path=MLN_DATABASE, domain_p_decs_path=DOMAIN_P_DECS)
 model.train()
-\end{lstlisting}
+\end{lstlisting}\label{example-project}
 
 From the above code we can observe how comfortable the process is from generating necessary data, simulating a pddl domain state to training a model.
 The simplicity and modularity being a key aspect of our design goals can be clearly observed.
 An initial dataset of 100 problems is generated for the specified domain.
-A specified solver in this cas FFX generates a solutions dataset given our problems and domain.
+A specified solver in this case FFX generates a solutions dataset given our problems and domain.
 The Simulation module generates plan traces from the solutions and problems and creates a dataset of MLN databases for the learning model.
 Finally the learning model processes these databases and traines a markov network for each action present in the dataset.
 
