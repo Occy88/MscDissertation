@@ -33,18 +33,17 @@
 \BOOKMARK [1][-]{section.4.3}{Learning model interface and implementation}{chapter.4}% 33
 \BOOKMARK [1][-]{section.4.4}{Integrating MLN Learner module}{chapter.4}% 34
 \BOOKMARK [1][-]{section.4.5}{Training and reconstruction of STRIPS action models}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.6}{Evaluation module}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.7}{Final integration}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter.5}{Analysis and Review}{}% 38
-\BOOKMARK [1][-]{section.5.1}{Metrics report}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.1.1}{Framework - Reliability}{section.5.1}% 40
-\BOOKMARK [2][-]{subsection.5.1.2}{Framework - Maintainability}{section.5.1}% 41
-\BOOKMARK [2][-]{subsection.5.1.3}{Framework - Testability}{section.5.1}% 42
-\BOOKMARK [2][-]{subsection.5.1.4}{Framework - Portability}{section.5.1}% 43
-\BOOKMARK [2][-]{subsection.5.1.5}{Framework - Reusability}{section.5.1}% 44
-\BOOKMARK [2][-]{subsection.5.1.6}{User - Adoption friction}{section.5.1}% 45
-\BOOKMARK [2][-]{subsection.5.1.7}{User - Learning curve}{section.5.1}% 46
-\BOOKMARK [2][-]{subsection.5.1.8}{User - Development complexity}{section.5.1}% 47
-\BOOKMARK [1][-]{section.5.2}{Sample project review}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.3}{Evaluating trained model}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 50
+\BOOKMARK [1][-]{section.4.6}{Final integration}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Analysis and Review}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Metrics report}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.1.1}{Framework - Reliability}{section.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.1.2}{Framework - Maintainability}{section.5.1}% 40
+\BOOKMARK [2][-]{subsection.5.1.3}{Framework - Testability}{section.5.1}% 41
+\BOOKMARK [2][-]{subsection.5.1.4}{Framework - Portability}{section.5.1}% 42
+\BOOKMARK [2][-]{subsection.5.1.5}{Framework - Reusability}{section.5.1}% 43
+\BOOKMARK [2][-]{subsection.5.1.6}{User - Adoption friction}{section.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1.7}{User - Learning curve}{section.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.1.8}{User - Development complexity}{section.5.1}% 46
+\BOOKMARK [1][-]{section.5.2}{Sample project review}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.3}{Evaluating trained model}{chapter.5}% 48
+\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 49
