@@ -151,12 +151,8 @@ We measure accuracy by analysing how similar a derived logic network is to the e
 The same formula can be applied for \(a_{add},a_{del}\) simply by replacing the 0 with 1 and -1 respectively. The total error of the resulting MLN is the average of the above three errors expressed by the equation bellow.
 \[E(MLN)=\frac{sum(E(a_{pre}),E(a_{del}),E(a_{add}))}{3}\]
 
-
-As a preliminary experiment, weights were pruned due to the excessive time it took to train the MLN, this means only the predicates that are related to the action model are being trained.
-The effect of pruning predicates is that none of the weights in the network should be negative unless affected by noise.
-I have also included the cumulative weights (sum of independently trained MLN's for each database and action model.
-
-
+The first test was to simply train the model on the generated set of databases without applying any noise.
+We will analyse the training of an MLN with only one of the actions "move".
 \begin{figure}[h]
  \centering
  \begin{minipage}[b]{0.49\linewidth}
@@ -173,6 +169,11 @@ I have also included the cumulative weights (sum of independently trained MLN's 
  \end{minipage}
 \end{figure}
 
+As each predicate is part of the action model, we expect none of the weights to be negative, and all lines in the cumulative graph on the left should have a positive gradient between each iteration.
+This experiment was run as a sanity test to ensure that indeed an MLN is being trained as expected which is confirmed by the data produced.
+
+In the next set of experiments we ran the same model on data with now 30\% and 70\% random noise on all predicates.
+The expectation in this scenario is that more noise would equate to weights approaching 0.
 \begin{figure}[h]
  \centering
  \begin{minipage}[b]{0.49\linewidth}
@@ -184,27 +185,38 @@ I have also included the cumulative weights (sum of independently trained MLN's 
  \begin{minipage}[b]{0.49\linewidth}
 
  \includegraphics[width=1\textwidth]{images/tests/movegraph_rand_30}
- \caption{Move action MLN, .7 rand noise on){fig:mv_100_cum}}
+ \caption{Move action MLN, .7 rand noise on){fig:mv 100 cum}}
 
  \end{minipage}
 \end{figure}
 
+The initial spices on some predicates in the above figures, are a result of noise not affecting specific predicates until later iterations, we can see that even with 30\% noise in the dataset weights tend to remain positive, this would be of larger emphasis if predicates not related to the model were included in the training.
+
+Finally we trained the model applying systematic noise to only one predicate, this would be a more common scenario in a real world environment as typically few sensors fail.
+The systematic noise is applied on the "conn(v0,v1,0)" predicate.
 \begin{figure}[h]
  \centering
  \begin{minipage}[b]{0.49\linewidth}
  \includegraphics[width=1\textwidth]{images/tests/movegraph_sys_70}
- \caption{Move action MLN, .3 sys noise on conn(v0,v1,0) {fig:mv_100}}
+ \caption{Move action MLN, .3 sys noise on conn(v0,v1,0) {fig:mv 100}}
 
  \end{minipage}
  \hfill
  \begin{minipage}[b]{0.49\linewidth}
 
  \includegraphics[width=1\textwidth]{images/tests/movegraph_sys_30}
- \caption{Move action MLN, .7 sys noise on conn(v0,v1,0){fig:mv_100_cum}}
+ \caption{Move action MLN, .7 sys noise on conn(v0,v1,0){fig:mv 100 cum}}
 
  \end{minipage}
 \end{figure}
-\newpage
-As we can observe from the above data, Although weights will reduce with noise. If we include predicates unrelated to the model, these will reduce much faster than noisy weights, this would allow us to recreate an action model from the network. \newline\newline
-The greatest issue with this approach is not the viability of the technique but the efficiency of it. To train 25 database containing multiple actions, it takes around 30s to 1min, a multicore approach was not implemented in the pracmln package used for training, and a multitude of optimizations and fixes were done in order to speed up training and errors (optimizing data structures, operations over arrays, improperly handled exceptions, a fixed package has been uploaded to the project). A partial rewrite of the package for training MLN's online is required in order to use this technique on any moderately serious domains (>20 predicates). Optimizations include multithreading the training process, optimizing operation over grounded predicates and weights.\newline\newline
-The results in the figures provided were created by training MLN's on pruned weights as forgoing this step made training impossible. Training speed reduces significantly when the number of weights are doubled or tripled which is a common occurrence in a normal domain.
+
+We can observe that systematic noise causes the weights to be pushed down compared to other predicates, however the fact that values are not deeply negative demonstrates the robustness of the model when noise is applied.
+
+The greatest issue with this approach is not the viability of the technique but the efficiency of it.
+To train 25 database containing multiple actions, it takes around 30s to 1min, a multicore approach was not implemented in the pracmln package used for training, and a multitude of optimizations and fixes were done in order to speed up training such as patching errors, optimizing data structures and operations over arrays, fixing improperly handled exceptions.
+A patched package has been uploaded to the project.
+A partial rewrite of the package for training MLN's online is required in order to use this technique on any moderately serious domains (>20 predicates).
+Optimizations include multithreading the training process, optimizing operation over grounded predicates and weights.
+
+The results in the figures provided were created by training MLN's on pruned weights as forgoing this step made training impossible.
+Training speed reduces significantly when the number of weights are doubled or tripled which is a common occurrence in a normal domain.

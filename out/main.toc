@@ -46,4 +46,4 @@
 \contentsline {subsection}{\numberline {5.1.8}User - Development complexity}{49}{subsection.5.1.8}%
 \contentsline {section}{\numberline {5.2}Sample project review}{49}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Evaluating trained model}{51}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion}{54}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Discussion}{54}{chapter.6}%
